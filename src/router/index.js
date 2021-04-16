@@ -1,14 +1,22 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 import Register from "@/views/Register.vue";
 import Login from "../views/Login.vue";
 import Forgot_Password from "../views/Forgot_Password.vue";
+import Logout from "../views/Logout.vue";
+import PersonalFriendPage from "../views/Personal_Friend_Page.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/register",
     name: "Register",
     component: Register,
   },
@@ -18,9 +26,19 @@ const routes = [
     component: Login,
   },
   {
+    path: "/logout",
+    name: "Logout",
+    component: Logout,
+  },
+  {
     path: "/forgot_password",
     name: "Forgot_Password",
     component: Forgot_Password,
+  },
+  {
+    path: "/Personal_Friend_Page",
+    name: "Personal_Friend_Page",
+    component: PersonalFriendPage,
   },
 ];
 
@@ -35,13 +53,13 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   /*
-    Environment Variables
-    .env                # loaded in all cases
-    .env.local          # loaded in all cases, ignored by git
-    .env.[mode]         # only loaded in specified mode
-    .env.[mode].local   # only loaded in specified mode, ignored by git
-    https://cli.vuejs.org/guide/mode-and-env.html#environment-variables
-    */
+      Environment Variables
+      .env                # loaded in all cases
+      .env.local          # loaded in all cases, ignored by git
+      .env.[mode]         # only loaded in specified mode
+      .env.[mode].local   # only loaded in specified mode, ignored by git
+      https://cli.vuejs.org/guide/mode-and-env.html#environment-variables
+      */
   routes,
 });
 

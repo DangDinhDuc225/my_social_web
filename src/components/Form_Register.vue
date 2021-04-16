@@ -34,6 +34,16 @@
           </p>
 
           <p>
+            <label for="your-phonenumber">your phone</label>
+            <input
+              id="your-phonenumber"
+              v-model="yourPhone"
+              type="number"
+              name="your-phonenumber"
+            >
+          </p>
+
+          <p>
             <label for="password">password</label>
             <input 
               id="password"
@@ -44,7 +54,7 @@
           </p>
 
           <p>
-            <label for="confirm-password">confirm-password</label>
+            <label for="confirm-password">confirm password</label>
             <input 
               id="confirm-password"
               v-model="confirmPassword"
@@ -56,7 +66,7 @@
           <p>
             <input 
               type="submit"
-              value="Submit"
+              value="Sign up"
             ><!-- The value attribute specifies the value of an <input> element.
               The value attribute is used differently for different input types:
               +, For "button", "reset", and "submit" - it defines the text on the button
@@ -64,6 +74,8 @@
               value of the input field
               +, For "checkbox", "radio", "image" - it defines the value associated with
               the input (this is also the value that is sent on submit)
+
+              value la chu hien tren button
             -->
           </p>
           
@@ -78,12 +90,13 @@
 
 */ 
 export default {
-  name: "Form",
+  name: "FormRegister",
   data: function() {
     return {
       errors: [],
       yourName: null,
       yourEmail: null,
+      yourPhone: null,
       password: null,
       confirmPassword: null
     }
@@ -136,7 +149,7 @@ export default {
 
   methods: {
     checkForm: function (e) {
-      if (this.yourName && this.yourEmail && this.password && this.confirmPassword) {
+      if (this.yourName && this.yourEmail &&this.yourPhone && this.password && this.confirmPassword) {
         return true;
       }
 
@@ -146,6 +159,9 @@ export default {
         this.errors.push('Name required.');
       }
       if (!this.yourEmail) {
+        this.errors.push('Email required.');
+      }
+      if (!this.yourPhone) {
         this.errors.push('Email required.');
       }
       if (!this.password) {

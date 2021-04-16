@@ -8,7 +8,9 @@
           but can be configured with the tag prop. 
           In addition, the link automatically gets an active CSS class when the target route is active.
        -->
+      <router-link to="/register">Register</router-link>
       <router-link to="/login">Login</router-link>
+      <router-link to="/logout">Logout</router-link>
     </div>
     <router-view />
     <!-- 
