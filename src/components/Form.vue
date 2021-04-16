@@ -1,7 +1,6 @@
 <template>
-  <div id="register_component">
         <form
-          id="register"
+          id="form"
           @submit="checkForm"
           action="https://vuejs.org/"
           method="post"
@@ -15,12 +14,22 @@
           </p>
 
           <p>
-            <label for="your_name">your_name</label>
+            <label for="your-name">your name</label>
             <input
-              id="your_name"
+              id="your-name"
               v-model="yourName" 
               type="text"
-              name="your_name"
+              name="your-name"
+            ><!-- The name attribute specifies the name of an <input> element.-->
+          </p>
+          
+          <p>
+            <label for="your-email">your email</label>
+            <input
+              id="your-email"
+              v-model="yourEmail"
+              type="email"
+              name="your-email"
             ><!-- The name attribute specifies the name of an <input> element.-->
           </p>
 
@@ -29,18 +38,18 @@
             <input 
               id="password"
               v-model="password"
-              type="text"
+              type="password"
               name="password"
             >
           </p>
 
           <p>
-            <label for="confirm_password">confirm_password</label>
+            <label for="confirm-password">confirm-password</label>
             <input 
-              id="confirm_password"
+              id="confirm-password"
               v-model="confirmPassword"
-              type="text"
-              name="confirm_password"
+              type="password"
+              name="confirm-password"
             >
           </p>
 
@@ -60,7 +69,6 @@
           
         </form><!-- The method attribute specifies how to send form-data 
           (the form-data is sent to the page specified in the action attribute). -->
-    </div>
 </template>
 
 <script>
@@ -70,11 +78,12 @@
 
 */ 
 export default {
-  name: "Register",
+  name: "Form",
   data: function() {
     return {
       errors: [],
       yourName: null,
+      yourEmail: null,
       password: null,
       confirmPassword: null
     }
@@ -127,7 +136,7 @@ export default {
 
   methods: {
     checkForm: function (e) {
-      if (this.yourName && this.password && this.confirmPassword) {
+      if (this.yourName && this.yourEmail && this.password && this.confirmPassword) {
         return true;
       }
 
@@ -135,6 +144,9 @@ export default {
 
       if (!this.yourName) {
         this.errors.push('Name required.');
+      }
+      if (!this.yourEmail) {
+        this.errors.push('Email required.');
       }
       if (!this.password) {
         this.errors.push('password required');
@@ -154,7 +166,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    #register {
+    #form {
         font-size: 20px;
     }
 </style>
