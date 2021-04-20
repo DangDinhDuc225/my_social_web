@@ -7,7 +7,7 @@
       <input
         type="text"
         placeholder="Hey guy, what are you thinking?"
-        v-on:click="showPostScreen = true"
+        v-on:click="$store.state.showPostScreen = !$store.state.showPostScreen"
       />
     </div>
   </div>
@@ -17,9 +17,7 @@
 export default {
   name: "PostStatus",
   data: function () {
-    return {
-      showPostScreen: false,
-    };
+    return {};
   },
 };
 </script>

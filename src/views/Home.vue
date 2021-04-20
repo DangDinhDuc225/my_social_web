@@ -3,7 +3,7 @@
     <img src="../assets/icons8-social-network-64.png" />
     <SearchFriends />
     <PostStatus />
-    <div v-if="showPostScreen">
+    <div v-if="$store.state.showPostScreen === true">
       <PostStatusScreen />
     </div>
   </div>
