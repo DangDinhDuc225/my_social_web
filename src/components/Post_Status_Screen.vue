@@ -31,11 +31,8 @@
 export default {
   name: "PostStatusScreen",
   data: function () {
-    return {
-      post: "",
-    };
+    return {};
   },
-  methods: {},
 };
 </script>
 <style scoped>
