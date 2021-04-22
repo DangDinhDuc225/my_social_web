@@ -16,5 +16,6 @@
 <script>
 export default {
   name: "Forgot_Password",
+  data() {},
 };
 </script>

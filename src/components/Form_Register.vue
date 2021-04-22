@@ -91,7 +91,7 @@
 */ 
 export default {
   name: "FormRegister",
-  data: function() {
+  data() {
     return {
       errors: [],
       yourName: null,
@@ -148,7 +148,7 @@ export default {
 
 
   methods: {
-    checkForm: function (e) {
+    checkForm(e) {
       if (this.yourName && this.yourEmail &&this.yourPhone && this.password && this.confirmPassword) {
         return true;
       }

@@ -8,14 +8,15 @@
       </div>
     </div>
     <div class="post">
-      {{ $store.state.postArray[$store.state.index] }}
+      {{ item }}
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "MyPosted",
-  data: function () {
+  props: ["item"],
+  data() {
     return {};
   },
 };

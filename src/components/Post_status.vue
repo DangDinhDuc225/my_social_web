@@ -16,7 +16,7 @@
 <script>
 export default {
   name: "PostStatus",
-  data: function () {
+  data() {
     return {};
   },
 };

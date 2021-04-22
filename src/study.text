@@ -2,3 +2,17 @@
 https://viblo.asia/p/namespace-trong-c-XL6lAv0R5ek
 * handler function
 https://stackoverflow.com/questions/195357/what-is-a-handler#:~:text=A%20handler%20is%20a%20routine,certain%20special%20tasks%20on%20memory.
+* localStorage la object
+https://www.w3schools.com/jsref/prop_win_localstorage.asp
+* lam viec voi object
+https://developer.mozilla.org/vi/docs/Web/JavaScript/Guide/Working_with_Objects
+* how to save array to localStorage
+https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+* clear data save on localStorage
+https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript
+* chuyen sang vue3x
+https://itzone.com.vn/vi/article/cung-tong-hop-thong-tin-ve-vue-3-phien-ban-moi-ba-dao-cua-vue-js/
+* how to pass values to child component vue and loop
+https://stackoverflow.com/questions/52534432/how-to-pass-values-to-child-component-vue-and-loop
+https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components
+

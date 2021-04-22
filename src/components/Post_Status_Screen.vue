@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "PostStatusScreen",
-  data: function () {
+  data() {
     return {};
   },
   methods: {

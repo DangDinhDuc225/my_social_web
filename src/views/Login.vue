@@ -17,5 +17,6 @@ export default {
   components: {
     FormLogin,
   },
+  data() {},
 };
 </script>

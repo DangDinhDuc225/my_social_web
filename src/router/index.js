@@ -1,5 +1,4 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Register from "@/views/Register.vue";
 import Login from "../views/Login.vue";
@@ -7,8 +6,6 @@ import Forgot_Password from "../views/Forgot_Password.vue";
 import Logout from "../views/Logout.vue";
 import PersonalFriendPage from "../views/Personal_Friend_Page.vue";
 import MyPosted from "../components/My_Posted";
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -55,9 +52,9 @@ simulate a full URL so that the page won't be reloaded when the URL changes.
 To get rid of the hash, we can use the router's history mode, which leverages the 
 history.pushState API to achieve URL navigation without a page reload:
 */
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+
   /*
         Environment Variables
         .env                # loaded in all cases

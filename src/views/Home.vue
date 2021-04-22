@@ -7,7 +7,11 @@
       <PostStatusScreen />
     </div>
     <div v-if="$store.state.showPost === true">
-      <MyPosted />
+      <MyPosted
+        v-for="item in $store.state.postArray"
+        v-bind:key="item.id"
+        :item="item"
+      />
     </div>
   </div>
 </template>

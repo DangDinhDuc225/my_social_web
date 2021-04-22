@@ -51,7 +51,7 @@
 */ 
 export default {
   name: "FormLogin",
-  data: function() {
+  data() {
     return {
       errors: [],
       yourEmail: null,
@@ -59,7 +59,7 @@ export default {
     }
   },
   methods: {
-    checkForm: function (e) {
+    checkForm(e) {
       if (this.yourEmail && this.password) {
         return true;
       }

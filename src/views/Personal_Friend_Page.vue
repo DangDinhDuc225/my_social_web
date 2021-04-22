@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "PersonalFriendPage",
-  data: function () {
+  data() {
     return {
       addFriend: false,
     };

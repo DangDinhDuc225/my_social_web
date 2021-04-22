@@ -100,7 +100,7 @@
 <script>
 export default {
   name: "SearchFriends",
-  data: function () {
+  data() {
     return {
       enterName: null,
       // arrayFriends: ["duc", "le", "hoa", "hong", "tham", "mau", "phai"],
@@ -126,7 +126,7 @@ export default {
     //         this.arrayFriends[index].split('');
     //     }
     // },
-    checkName: function () {
+    checkName() {
       // for (let index = 0; index < this.arrayFriends.length; index++) {
       //     if(this.enterName === this.arrayFriends[index]) {
       //         return this.showFriends = this.arrayFriends[index];
@@ -168,15 +168,15 @@ export default {
         }
       }
     },
-    searchFollowName: function () {
+    searchFollowName() {
       this.searchFollow = !this.searchFollow;
       this.searchFollowNameState = true;
     },
-    searchFollowEmail: function () {
+    searchFollowEmail() {
       this.searchFollow = !this.searchFollow;
       this.searchFollowEmailState = true;
     },
-    searchFollowNumberphone: function () {
+    searchFollowNumberphone() {
       this.searchFollow = !this.searchFollow;
       this.searchFollowNumberphoneState = true;
     },
