@@ -6,6 +6,7 @@ import Login from "../views/Login.vue";
 import Forgot_Password from "../views/Forgot_Password.vue";
 import Logout from "../views/Logout.vue";
 import PersonalFriendPage from "../views/Personal_Friend_Page.vue";
+import MyPosted from "../components/My_Posted";
 
 Vue.use(VueRouter);
 
@@ -40,6 +41,11 @@ const routes = [
     name: "Personal_Friend_Page",
     component: PersonalFriendPage,
   },
+  {
+    path: "/My_Posted",
+    name: "My_Posted",
+    component: MyPosted,
+  },
 ];
 
 /* 
@@ -53,13 +59,13 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   /*
-      Environment Variables
-      .env                # loaded in all cases
-      .env.local          # loaded in all cases, ignored by git
-      .env.[mode]         # only loaded in specified mode
-      .env.[mode].local   # only loaded in specified mode, ignored by git
-      https://cli.vuejs.org/guide/mode-and-env.html#environment-variables
-      */
+        Environment Variables
+        .env                # loaded in all cases
+        .env.local          # loaded in all cases, ignored by git
+        .env.[mode]         # only loaded in specified mode
+        .env.[mode].local   # only loaded in specified mode, ignored by git
+        https://cli.vuejs.org/guide/mode-and-env.html#environment-variables
+        */
   routes,
 });
 

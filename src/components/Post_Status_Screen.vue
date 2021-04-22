@@ -14,7 +14,7 @@
           name="enter-content"
           cols="40"
           rows="10"
-          v-model="post"
+          v-model="$store.state.post"
         ></textarea>
         <br />
         <br />
@@ -32,6 +32,21 @@ export default {
   name: "PostStatusScreen",
   data: function () {
     return {};
+  },
+  methods: {
+    postFunction() {
+      this.$store.state.index += 1;
+      this.$store.state.postArray.push(this.$store.state.post);
+      if (typeof Storage !== "undefined") {
+        localStorage.setItem(
+          "postArray",
+          JSON.stringify(this.$store.state.postArray)
+        );
+        console.log(localStorage);
+      }
+      this.$store.state.showPostScreen = false;
+      this.$store.state.showPost = true;
+    },
   },
 };
 </script>

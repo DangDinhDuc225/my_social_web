@@ -6,6 +6,9 @@
     <div v-if="$store.state.showPostScreen === true">
       <PostStatusScreen />
     </div>
+    <div v-if="$store.state.showPost === true">
+      <MyPosted />
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@
 import SearchFriends from "../components/Search_Friends";
 import PostStatus from "../components/Post_status";
 import PostStatusScreen from "../components/Post_Status_Screen";
+import MyPosted from "../components/My_Posted";
 
 export default {
   name: "Home",
@@ -21,6 +25,7 @@ export default {
     SearchFriends,
     PostStatus,
     PostStatusScreen,
+    MyPosted,
   },
 };
 </script>

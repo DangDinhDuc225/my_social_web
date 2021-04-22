@@ -6,6 +6,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     showPostScreen: null,
+    post: "",
+    showPost: false,
+    postArray: [],
+    index: -1,
   },
   mutations: {},
   actions: {},
